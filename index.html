@@ -10,19 +10,38 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="shortcut icon" href="./assets/img/fav.png" type="image/x-icon">
     <title>Рисовалка</title>
   </head>
   <body>
-      <div class="container">
-          <h1 class="name_app">&#9999;&#65039; анимированая рисовалка</h1>
-          <nav class="nav_options">
-            <button id="btn_save">save</button>
-            <button id="btn_play">play</button>
-            <button id="btn_clear">clear</button>
-          </nav>
-          <canvas id="canvas">ничога нету</canvas>
-      </div>
-      <script src="./js/script.js"></script>
+    <div class="container">
+      <h1 class="name_app">&#9999;&#65039; анимированая рисовалка</h1>
+      <nav class="nav_options">
+        <button id="btn_save">save</button>
+        <button id="btn_play">play</button>
+        <button id="btn_clear">clear</button>
+
+        <div  class="parameters_line">
+          <p>параметры линии</p>
+          <select name="line_width" id="line_width">
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="5" selected>5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+          </select>
+          <input id="line_color" type="color"></input>
+        </div>
+        
+      </nav>
+      <canvas id="canvas">ничога нету</canvas>
+    </div>
+    <script src="./js/script.js"></script>
   </body>
 </html>
