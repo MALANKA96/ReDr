@@ -7,6 +7,8 @@ let btn_save = document.getElementById("btn_save");
 let btn_replay = document.getElementById("btn_replay");
 let btn_clear = document.getElementById("btn_clear");
 
+let spead_replay = document.getElementById("spead_replay");
+
 let isMouseDown = false;
 let coordinates = [];
 let coordinateX = 0;
@@ -91,7 +93,7 @@ function replay() {
 
     ctx.beginPath();
     ctx.moveTo(coordinateX, coordinateY);
-  }, 1);
+  }, 101 - spead_replay.value);
   console.log("btn_replay");
 }
 
