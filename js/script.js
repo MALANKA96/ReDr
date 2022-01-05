@@ -62,7 +62,7 @@ function save() {
 }
 
 function replay() {
-  coordinates = JSON.parse(localStorage.getItem("coordinates"));
+  coordinates = JSON.parse(localStorage.getItem("coordinates"));    
   let timer = setInterval(function () {
     if (!coordinates) {
       clearInterval(timer);
