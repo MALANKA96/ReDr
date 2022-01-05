@@ -11,20 +11,29 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="shortcut icon" href="./assets/img/fav.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/img/fav.png" type="image/x-icon" />
     <title>Рисовалка</title>
   </head>
   <body>
     <div class="container">
       <h1 class="name_app">&#9999;&#65039; анимированая рисовалка</h1>
       <nav class="nav_options">
-        <button id="btn_save">save</button>
-        <button id="btn_replay">replay</button>
-        <button id="btn_clear">clear</button>
-
+          <div class="btn-group">
+            <button >
+                <img id="btn_save" src="./assets/icon/save.png" alt="save" />
+            </button>
+            <button id="btn_replay">
+                <img src="./assets/icon/replay.png" alt="replay" />
+            </button>
+            <button id="btn_clear">
+                <img src="./assets/icon/clear.png" alt="clear" />
+            </button>
+          </div>
+       
         <div  class="parameters_line">
-          <p>параметры линии</p>
-          <select name="line_width" id="line_width">
+            <img src="./assets/icon/drawing.png" alt="drawing" />
+
+            <select name="line_width" id="line_width">
             <option value="1">1</option>
             <option value="3">3</option>
             <option value="5" selected>5</option>
@@ -39,7 +48,11 @@
           <input id="line_color" type="color"></input>
           
         </div>
-        <input id="spead_replay" type="range" min="1" max="100" step="1" value="50"> 
+        <div class="parameters_replay">
+            <img src="./assets/icon/spead.png" alt="spead" />
+            <input id="spead_replay" type="range" min="1" max="100" step="1" value="50" />
+        </div>
+         
       </nav>
       <canvas id="canvas">ничога нету</canvas>
     </div>
