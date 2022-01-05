@@ -15,9 +15,7 @@ let coordinateY = 0;
 canvas.width = window.innerWidth - 30;
 canvas.height = window.innerHeight - 150;
 
-canvas.addEventListener("mousedown", function (e) {
-  isMouseDown = true;
-
+function draw(e) {
   coordinateX = e.layerX;
   coordinateY = e.layerY;
 
@@ -25,11 +23,23 @@ canvas.addEventListener("mousedown", function (e) {
   ctx.strokeStyle = String(line_color.value);
 
   coordinates.push([coordinateX, coordinateY]);
+
   ctx.lineWidth = line_width.value * 2;
+
+  ctx.lineTo(coordinateX, coordinateY);
+  ctx.stroke();
 
   ctx.beginPath();
   ctx.arc(coordinateX, coordinateY, line_width.value, 0, Math.PI * 2);
   ctx.fill();
+
+  ctx.beginPath();
+  ctx.moveTo(coordinateX, coordinateY);
+}
+
+canvas.addEventListener("mousedown", function (e) {
+  isMouseDown = true;
+  draw(e);
 });
 
 canvas.addEventListener("mouseup", function () {
@@ -40,25 +50,7 @@ canvas.addEventListener("mouseup", function () {
 
 canvas.addEventListener("mousemove", function (e) {
   if (isMouseDown) {
-    coordinateX = e.layerX;
-    coordinateY = e.layerY;
-
-    coordinates.push([coordinateX, coordinateY]);
-
-    ctx.fillStyle = String(line_color.value);
-    ctx.strokeStyle = String(line_color.value);
-
-    ctx.lineWidth = line_width.value * 2;
-
-    ctx.lineTo(coordinateX, coordinateY);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.arc(coordinateX, coordinateY, line_width.value, 0, Math.PI * 2);
-    ctx.fill();
-
-    ctx.beginPath();
-    ctx.moveTo(coordinateX, coordinateY);
+    draw(e);
   }
 });
 
