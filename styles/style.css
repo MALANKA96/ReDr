@@ -47,7 +47,8 @@ img {
   height: 32px;
 }
 .parameters_line,
-.parameters_replay {
+.parameters_replay,
+.parameters_download {
   display: flex;
   align-items: center;
 }

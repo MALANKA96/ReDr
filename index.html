@@ -19,8 +19,8 @@
       <h1 class="name_app">Reproduction of a Drawing</h1>
       <nav class="nav_options">
           <div class="btn-group">
-            <button >
-                <img id="btn_save" src="./assets/icon/save.png" alt="save" />
+            <button id="btn_save">
+                <img  src="./assets/icon/save.png" alt="save" />
             </button>
             <button id="btn_replay">
                 <img src="./assets/icon/replay.png" alt="replay" />
@@ -33,7 +33,7 @@
         <div  class="parameters_line">
             <img src="./assets/icon/drawing.png" alt="drawing" />
 
-            <select name="line_width" id="line_width">
+          <select name="line_width" id="line_width">
             <option value="1">1</option>
             <option value="3">3</option>
             <option value="5" selected>5</option>
@@ -55,6 +55,16 @@
             <p>fast</p>
         </div>
          
+        <div class="parameters_download">
+            <button id="btn_download">
+                <img  src="./assets/icon/download.png" alt="download" />
+            </button>
+            <select id="format_img">
+                <option value="image/png" selected>PNG</option>
+                <option value="image/jpeg">JPEG</option>
+            </select>
+        </div>
+        
       </nav>
       <canvas id="canvas" disabled>ничога нету</canvas>
     </div>

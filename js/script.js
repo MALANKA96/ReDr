@@ -7,6 +7,10 @@ let btn_save = document.getElementById("btn_save");
 let btn_replay = document.getElementById("btn_replay");
 let btn_clear = document.getElementById("btn_clear");
 
+let btn_download = document.getElementById("btn_download");
+
+let format_img = document.getElementById("format_img");
+
 let spead_replay = document.getElementById("spead_replay");
 
 let isMouseDown = false;
@@ -62,7 +66,7 @@ function save() {
 }
 
 function replay() {
-  coordinates = JSON.parse(localStorage.getItem("coordinates"));    
+  coordinates = JSON.parse(localStorage.getItem("coordinates"));
   let timer = setInterval(function () {
     if (!coordinates) {
       clearInterval(timer);
@@ -116,4 +120,11 @@ btn_replay.addEventListener("click", () => {
 });
 btn_clear.addEventListener("click", () => {
   clear();
+});
+btn_download.addEventListener("click", () => {
+  const link = document.createElement("a");
+  link.download = "myNewImg";
+  link.href = canvas.toDataURL(format_img.value);
+  link.click();
+  link.delete;
 });
