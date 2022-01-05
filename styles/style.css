@@ -50,8 +50,9 @@ button:focus {
 
 #canvas {
   display: block;
-  /* background-color: rgb(44, 46, 43); */
+  background-color: #ffffff;
   -webkit-box-shadow: 0px 0px 7px 9px rgba(160, 160, 160, 0.2);
   -moz-box-shadow: 0px 0px 7px 9px rgba(160, 160, 160, 0.2);
   box-shadow: 0px 0px 7px 9px rgba(160, 160, 160, 0.2);
+  cursor: crosshair;
 }
